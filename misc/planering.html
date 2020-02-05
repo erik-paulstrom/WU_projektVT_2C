@@ -14,6 +14,7 @@
         table, td, th {
             border: 1px solid black
         }
+        
     </style>
 
 </head>
@@ -32,11 +33,16 @@
     <img src="../misc/spel.jpeg" alt="Skiss av spelsidan">   <!-- Samma gäller raderna, 3 huvudrader och sedan fler rader efter behov innuti.-->
     <img src="../misc/diskussion.jpeg" alt="Skiss av diskussionssidan">
     <img src="../misc/om oss.jpeg" alt="Skiss av om oss-sidan">
+    <img id="skiss_grid" src="../misc/skiss_grid_blixt.jpeg" alt="Skiss över gridsystem och några mått">
+
 
     <style>
         img {
             width: 500px;
             height: auto;    
+        }
+        #skiss_grid {
+            transform: rotate(90deg);
         }
     </style>
 
@@ -156,7 +162,7 @@
     Idag har jag skapat min css-fil och gjort grundstrukturen för hemsidan. Till att börja med genom att skapa header, seactions och nav i html som jag sedan gjorde ett gridsystem av i css genom att lägga alla taggar i en och samma div-tagg. Nu har jag grunden för hur startsidan samt följdsidorna kommer se ut. Jag dokumenterar även koden jag skriver så att jag eller en annan läsare kan ta hjälp av kommentarerna för att förstå en viss kods funktion. 
     <h3>Lektion vecka 6</h3>
     <!-- Fyll på med dokumentation här. -->
-
+    Idag har jag gjort skisser på hur mina grids ska se ut för att undelätta när jag sedan kodar gridsystem bland annat. Detta innebär att jag helt enkelt gör om det jag gjorde förra veckan för att göra det mer utförligt och underlätta vid kodning såklart. Efter jag gjort färdigt skissen för både mobil och desktop började jag helt enkelt göra om mina gridsystem och jobbade självklart "mobil first" och gjorde färdigt den och därefter gjorde jag en sektion inom en media querie som skulle ha kravet minst 1024 pixlar. Där i gjorde jag gridsystemet för hur desktop ska se ut. Jag stötte på problem med mina gridsystem och det var att inget ändrades när jag exempelvis försökte göra rader högre genom att öka pixlarna eller att ta 2 fractions istället för 1 fraction. Detta problemet fick jag tänka länge på innan jag kom underfull med att jag skrivit: grid-template-rows: 1fr, 1fr, osv. alltså att jag använde kommatecken mellan enheterna vilket gör att den då läser in första enheten och använder den överallt däreter. Nu efter jag har stött på och löst detta problemet tror jag att jag blivit immun mot det och kan åtgärda problemet snabbare om jag skulle råka göra om det.
     <h3>Lektion vecka 8</h3>
     <!-- Fyll på med dokumentation här. -->
 

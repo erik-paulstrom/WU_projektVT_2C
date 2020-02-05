@@ -2,7 +2,9 @@
     margin: 0px;
     box-sizing: border-box;
     background-color: #EEEEEE;
+    font-family: 'Strait', sans-serif;
 }
+
 
 .maingrid {
     display: grid; 
@@ -17,28 +19,44 @@
     "s3 s3 s3 s3";
 }
 
+.center {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+}
+
 .he {
     grid-area: he;
-
+    position: relative;
+    text-align: center;
+    padding-top: 15px;
 }
 
 .na {
     grid-area: na;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .s1 {
     grid-area: s1;
-    border: 1px solid black; 
+    border: 1px solid #BEBEBE; 
+}
+
+#smash_bros{
+    object-fit: scale-down;
 }
 
 .s2 {
     grid-area: s2;
-    border: 1px solid black; 
+    border: 1px solid #BEBEBE; 
 }
 
 .s3 {
     grid-area: s3;
-    border: 1px solid black; 
+    border: 1px solid #BEBEBE; 
 }
 
 @media only screen and (min-width: 1024px) {
@@ -53,4 +71,24 @@
     "s2 s3";
 }
 
+}
+
+@media only screen and (max-width: 1023px) {
+    .navLinks {
+        display: flex;
+        float: column; 
+        position: absolute;
+        background-color: #EEEEEE;
+        align-items: center;
+    }
+    
+    .hamburgemeny div {
+        width: 25px;
+        height: 3px;
+        background-color: #7472DB;
+        border: 1px solid #070db1;
+        margin: 5px;
+        border-radius: 20%;
+        flex-direction: column;
+    }
 }
