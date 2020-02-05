@@ -1,56 +1,29 @@
 * {
     margin: 0px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
+    background-color: #EEEEEE;
 }
 
 .maingrid {
-    display: grid;
-    width: 100vw;
+    display: grid; 
+    width: 100vw; 
     height: 100vh;
-    grid-template-rows: 0.20fr 0.6fr 0.20fr 1fr;
-    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-columns: 1fr 1fr 1fr 75px;
+    grid-template-rows: 75px 200px 400px 400px;
     grid-template-areas: 
-    "b1 he b2"
-    "b3 s1 b4"
-    "b5 na b6"
-    "b7 s2 b8";
+    "he he he na"
+    "s1 s1 s1 s1"
+    "s2 s2 s2 s2"
+    "s3 s3 s3 s3";
 }
 
-.b1 {
-    grid-area: b1;
-}
-
-.b2 {
-    grid-area: b2;
-}
-
-.b3 {
-    grid-area: b3;
-}
-
-.b4 {
-    grid-area: b4;
-}
-
-.b5 {
-    grid-area: b5;
-}
-
-.b6 {
-    grid-area: b6;
-}
-
-.b7 {
-    grid-area: b7;
-}
-
-.b8 {
-    grid-area: b8;
-}
-
-.header {
+.he {
     grid-area: he;
-    border: 1px solid black; 
+
+}
+
+.na {
+    grid-area: na;
 }
 
 .s1 {
@@ -58,12 +31,26 @@
     border: 1px solid black; 
 }
 
-.na {
-    grid-area: na;
-    border: 1px solid black; 
-}
-
 .s2 {
     grid-area: s2;
     border: 1px solid black; 
+}
+
+.s3 {
+    grid-area: s3;
+    border: 1px solid black; 
+}
+
+@media only screen and (min-width: 1024px) {
+
+.maingrid {
+    grid-template-rows: 0.6fr 2fr 0.6fr 4fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "he he"
+    "s1 s1"
+    "na na"
+    "s2 s3";
+}
+
 }
