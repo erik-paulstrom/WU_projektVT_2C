@@ -54,7 +54,7 @@
     grid-area: s2;
     border: 1px solid #BEBEBE; 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 250px 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "bakgrund1 textruta bakgrund4"
@@ -65,8 +65,18 @@
 
 #textruta {
     grid-area: textruta;
-    border: 1px solid black;     
+    border: 1px solid #BEBEBE;
+    border-radius: 10px;     
     margin-top: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#text_s1 {
+    margin-top: 5px;
+    margin-left: -60px
 }
 
 #bakgrund1 {
