@@ -42,16 +42,47 @@
 
 .s1 {
     grid-area: s1;
-    border: 1px solid #BEBEBE; 
+    border: 1px solid #BEBEBE;   
+    overflow: hidden;
 }
 
 #smash_bros{
-    object-fit: scale-down;
+    height: 200px;
 }
 
 .s2 {
     grid-area: s2;
     border: 1px solid #BEBEBE; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "bakgrund1 textruta bakgrund4"
+    "bakgrund1 textruta bakgrund4"
+    "bakgrund1 textruta bakgrund4"
+    "bakgrund1 bakgrund3 bakgrund4";
+}
+
+#textruta {
+    grid-area: textruta;
+    border: 1px solid black;     
+    margin-top: 25px;
+}
+
+#bakgrund1 {
+    grid-area: bakgrund1;
+}
+
+#bakgrund2 {
+    grid-area: bakgrund2;
+}
+
+#bakgrund3 {
+    grid-area: bakgrund3;
+}
+
+#bakgrund4 {
+    grid-area: bakgrund4;
 }
 
 .s3 {
