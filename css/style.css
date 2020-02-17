@@ -1,8 +1,10 @@
 * {
     margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    background-color: #EEEEEE;
+    background: none; 
     font-family: 'Strait', sans-serif;
+
 }
 
 
@@ -29,7 +31,9 @@
     grid-area: he;
     position: relative;
     text-align: center;
-    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .na {
@@ -42,17 +46,17 @@
 
 .s1 {
     grid-area: s1;
-    border: 1px solid #BEBEBE;   
+    background-color: white;
     overflow: hidden;
 }
 
 #smash_bros{
-    height: 200px;
+    height: auto;
+    width: 100%;
 }
 
 .s2 {
     grid-area: s2;
-    border: 1px solid #BEBEBE; 
     display: grid;
     grid-template-columns: 1fr 250px 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -65,51 +69,151 @@
 
 #textruta {
     grid-area: textruta;
+    background-color: #E2e2e2;
     border: 1px solid #BEBEBE;
     border-radius: 10px;     
     margin-top: 25px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+#textruta h1 {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#textruta p {
+    margin: 0px 5px 0px 5px;
+}
+
+#textruta img {
+    width: 30px; 
+    height: 30px; 
+    margin-left: 5px;
+}
+
+#textruta div {
+    margin-top: 5px; 
     display: flex;
     flex-direction: row;
-    justify-content: center;
 }
 
-#text_s1 {
-    margin-top: 5px;
-    margin-left: -60px
-}
-
-#bakgrund1 {
+.bakgrund1 {
     grid-area: bakgrund1;
 }
 
-#bakgrund2 {
+.bakgrund2 {
     grid-area: bakgrund2;
 }
 
-#bakgrund3 {
+.bakgrund3 {
     grid-area: bakgrund3;
 }
 
-#bakgrund4 {
+.bakgrund4 {
     grid-area: bakgrund4;
 }
 
 .s3 {
     grid-area: s3;
-    border: 1px solid #BEBEBE; 
+    display: grid;
+    grid-template-columns: 1fr 250px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "bakgrund1 kalender bakgrund4"
+    "bakgrund1 kalender bakgrund4"
+    "bakgrund1 kalender bakgrund4"
+    "bakgrund1 bakgrund3 bakgrund4";
 }
+
+#kalender {
+    grid-area: kalender;
+    border: 1px solid #bebebe;
+    background-color: #e2e2e2;
+    display: grid;
+    grid-template-rows: 1px 14px 14px 14px 14px 14px 14px;
+    grid-template-columns: 31px 31px 31px 31px 31px 31px 31px 31.7px;
+    grid-template-areas: 
+    "kalender_top kalender_top kalender_top kalender_top kalender_top kalender_top kalender_top kalender_top"
+    "vecka_dag mån tis ons tor fre lör sön"
+    "vecka_dag mån tis ons tor fre lör sön"
+    "vecka_dag mån tis ons tor fre lör sön"
+    "vecka_dag mån tis ons tor fre lör sön"
+    "vecka_dag mån tis ons tor fre lör sön"
+    "vecka_dag mån tis ons tor fre lör sön";
+}
+
+#vecka_dag {
+    grid-area: vecka_dag;
+    border: 1px solid black;
+}
+
+#mån {
+    grid-area: mån;
+    border: 1px solid black; 
+}
+
+#tis {
+    grid-area: tis;
+    border: 1px solid black; 
+}
+
+#ons {
+    grid-area: ons;
+    border: 1px solid black; 
+}
+
+#tor {
+    grid-area: tor;
+    border: 1px solid black; 
+}
+
+#fre {
+    grid-area: fre;
+    border: 1px solid black; 
+}
+
+#lör {
+    grid-area: lör;
+    border: 1px solid black; 
+}
+
+#sön {
+    grid-area: sön;
+    border: 1px solid black; 
+}
+
+#kalender_top {
+    border: 1px solid #070db1;
+    margin-top: 0px;
+    height: 50px;
+    width: 250px;
+    background-color: #7472db;
+}
+
+#kalender img {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
 
 @media only screen and (min-width: 1024px) {
 
 .maingrid {
-    grid-template-rows: 0.6fr 2fr 0.6fr 4fr;
+    grid-template-rows: 0.6fr 5fr 0.6fr 4fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "he he"
     "s1 s1"
     "na na"
     "s2 s3";
+}
+
+.he {
+    padding: 10px;
 }
 
 }
@@ -132,4 +236,5 @@
         border-radius: 20%;
         flex-direction: column;
     }
+
 }
