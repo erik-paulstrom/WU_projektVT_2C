@@ -4,9 +4,7 @@
     box-sizing: border-box;
     background: none; 
     font-family: 'Strait', sans-serif;
-
 }
-
 
 .maingrid {
     display: grid; 
@@ -19,12 +17,6 @@
     "s1 s1 s1 s1"
     "s2 s2 s2 s2"
     "s3 s3 s3 s3";
-}
-
-.center {
-    position: absolute; 
-    top: 50%;
-    left: 50%;
 }
 
 .he {
@@ -42,6 +34,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
 }
 
 .s1 {
@@ -132,57 +131,10 @@
     grid-area: kalender;
     border: 1px solid #bebebe;
     background-color: #e2e2e2;
-    display: grid;
-    grid-template-rows: 1px 14px 14px 14px 14px 14px 14px;
-    grid-template-columns: 31px 31px 31px 31px 31px 31px 31px 31.7px;
-    grid-template-areas: 
-    "kalender_top kalender_top kalender_top kalender_top kalender_top kalender_top kalender_top kalender_top"
-    "vecka_dag mån tis ons tor fre lör sön"
-    "vecka_dag mån tis ons tor fre lör sön"
-    "vecka_dag mån tis ons tor fre lör sön"
-    "vecka_dag mån tis ons tor fre lör sön"
-    "vecka_dag mån tis ons tor fre lör sön"
-    "vecka_dag mån tis ons tor fre lör sön";
-}
-
-#vecka_dag {
-    grid-area: vecka_dag;
-    border: 1px solid black;
-}
-
-#mån {
-    grid-area: mån;
-    border: 1px solid black; 
-}
-
-#tis {
-    grid-area: tis;
-    border: 1px solid black; 
-}
-
-#ons {
-    grid-area: ons;
-    border: 1px solid black; 
-}
-
-#tor {
-    grid-area: tor;
-    border: 1px solid black; 
-}
-
-#fre {
-    grid-area: fre;
-    border: 1px solid black; 
-}
-
-#lör {
-    grid-area: lör;
-    border: 1px solid black; 
-}
-
-#sön {
-    grid-area: sön;
-    border: 1px solid black; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 #kalender_top {
@@ -198,11 +150,31 @@
     margin-left: 5px;
 }
 
+#kalender th {
+    font-size: 15px;
+    border: 1px solid black;   
+}
+
+#kalender td {
+    border: 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kalender table {
+    border-collapse: collapse; 
+}
+
 
 
 @media only screen and (min-width: 1024px) {
 
 .maingrid {
+    height: 100vh;
+    width: 100vw;
     grid-template-rows: 0.6fr 5fr 0.6fr 4fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
@@ -220,14 +192,40 @@
 
 @media only screen and (max-width: 1023px) {
     .navLinks {
+        height: 50vh;
+        width: 50vw;
+        top: 0vh;
         display: flex;
+        align-items: center;
         float: column; 
         position: absolute;
         background-color: #EEEEEE;
         align-items: center;
+        right: -60vw;
+        transition: ease 0.25;
+        list-style: none;
+        background-color: rgba(116, 114, 219, 0.925);
+        transition: ease 0.25s;
+        border-radius: 5px 0px 0px 5px;
+        border: 1px solid #070db1;
+    }
+
+    .navLinks a {
+        text-decoration: none;
+        color: white;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: black;
+    }
+
+    .active {
+        transform: translateX(-60vw);
+    }
+
+    .burger {
+        position: relative;
     }
     
-    .hamburgemeny div {
+    .burger div {
         width: 25px;
         height: 3px;
         background-color: #7472DB;
@@ -235,6 +233,20 @@
         margin: 5px;
         border-radius: 20%;
         flex-direction: column;
+        transition: ease 0.1s;
     }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-4px, 7px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-4px, -7px);
+    }
+
 
 }
