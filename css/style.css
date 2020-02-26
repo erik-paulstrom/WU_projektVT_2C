@@ -34,9 +34,9 @@
 
 .hemknapp {
     position: absolute;
-    width: 10vw;
-    height: 6vh; 
-    margin-left: 5%;   
+    width: 40px;
+    height: 40px; 
+    margin-left: 0%;   
 }
 
 .titel_följdsida {
@@ -69,7 +69,7 @@
     display: flex;
     justify-content: center;
     margin-top: 5vh;
-    font-size: 30px;
+    font-size: 45px;
 }
 
 #smash_bros{
@@ -79,6 +79,7 @@
 
 .huvudruta {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100vw;
     height: 100vh;
@@ -86,11 +87,101 @@
     flex-direction: row;
 }
 
+.grid_huvudruta_spel {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "spel_1"
+    "spel_2"
+    "spel_3";
+}
+
+.spel_1 {
+    grid-area: spel_1;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.spel_2 {
+    grid-area: spel_2;
+    border: 1px solid black;
+}
+
+.spel_3 {
+    grid-area: spel_3;
+    border: 1px solid black;
+}
+
+.grid_huvudruta {
+    height: 100vh;
+    width: 100vw;
+    display: grid; 
+    grid-template-rows: 0.3fr 0.3fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "rad1"
+    "rad2"
+    "rad3";
+}
+
+.grid_huvudruta img {
+    width: 40px;
+    height: 40px;
+}
+
+.grid_huvudruta h1 {
+    margin: 1.5vh;
+}
+
+.rad1 {
+    grid-area: rad1;
+    border: 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.rad2 {
+    grid-area: rad2;
+    border: 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.rad3 {
+    grid-area: rad3;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.rad3 img {
+    width: 90px;
+    height: 90px;
+    margin: 5%;
+}
+
 #fifa {
     height: 15vh;
     width: 45vw;
     position: absolute;
-    margin-right: 0vw;
+    right: 53vw;
+}
+
+.huvudruta p {
+    font-size: 1em;
+    top: 10vh;
 }
 
 .kalender_top2 {
