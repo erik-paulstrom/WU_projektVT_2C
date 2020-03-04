@@ -103,17 +103,24 @@
     grid-area: spel_1;
     border: 1px solid black;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    overflow-x: hidden;
 }
 
 .spel_2 {
     grid-area: spel_2;
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
 }
 
 .spel_3 {
     grid-area: spel_3;
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
 }
 
 .grid_huvudruta {
@@ -128,17 +135,46 @@
     "rad3";
 }
 
-.grid_huvudruta img {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    right: 10vw;
+.spel_1 img {
+    width: 60vw;
+    height: 20vh;
+    align-self: center;
+    margin-left: 20vw;
 }
 
-.spel_1 p {
-    
-    position: absolute;
-   
+.spel_1 h1 {
+    font-size: 1.5em;
+    margin-top: 1vh;
+    margin-left: -35vw;
+    width: 50vw;
+}
+
+.spel_2 h1 {
+    font-size: 1.5em;
+    margin-top: 1vh;
+    margin-left: -54vw;
+    width: 50vw;
+}
+
+.spel_2 img {
+    width: 60vw;
+    height: 20vh;
+    align-self: center;
+    margin-left: 20vw;
+}
+
+.spel_3 h1 {
+    font-size: 1.5em;
+    margin-top: 1vh;
+    margin-left: -44vw;
+    width: 50vw;
+}
+
+.spel_3 img {
+    width: 60vw;
+    height: 20vh;
+    align-self: center;
+    margin-left: 20vw;
 }
 
 .rad1 {
@@ -176,13 +212,6 @@
     margin: 5%;
 }
 
-#fifa {
-    height: 15vh;
-    width: 45vw;
-    position: fixed;
-    right: 5vw;
-}
-
 .huvudruta p {
     font-size: 1em;
     top: 10vh;
@@ -199,7 +228,6 @@
 
 .kalender_top2 img {
     margin-left: 3vw;
-    
 }
 
 #super_smash_om_oss {
@@ -344,8 +372,50 @@
 }
 
 .he {
+    grid-area: he;
     padding: 10px;
 }
+
+.s1 {
+    grid-area: s1;
+}
+
+.na {
+    grid-area: na;
+    background-color: #7472db;
+    border: 1px solid #070db1;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.navLinks li {
+    list-style-type: none;
+    width: 100%;
+    
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0.6%;
+}
+
+.s2 {
+    grid-area: s2;
+}
+
+.s3 {
+    grid-area: s3;
+}
+
 
 }
 
