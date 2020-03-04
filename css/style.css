@@ -131,10 +131,14 @@
 .grid_huvudruta img {
     width: 40px;
     height: 40px;
+    position: absolute;
+    right: 10vw;
 }
 
-.grid_huvudruta h1 {
-    margin: 1.5vh;
+.spel_1 p {
+    
+    position: absolute;
+   
 }
 
 .rad1 {
@@ -175,8 +179,8 @@
 #fifa {
     height: 15vh;
     width: 45vw;
-    position: absolute;
-    right: 53vw;
+    position: fixed;
+    right: 5vw;
 }
 
 .huvudruta p {
