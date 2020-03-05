@@ -244,13 +244,13 @@
 .s2 {
     grid-area: s2;
     display: grid;
-    grid-template-columns: 1fr 250px 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "bakgrund1 textruta bakgrund4"
     "bakgrund1 textruta bakgrund4"
     "bakgrund1 textruta bakgrund4"
-    "bakgrund1 bakgrund3 bakgrund4";
+    "bakgrund1 textruta bakgrund4";
 }
 
 #textruta {
@@ -258,7 +258,8 @@
     background-color: #E2e2e2;
     border: 1px solid #BEBEBE;
     border-radius: 10px;     
-    margin-top: 25px;
+    margin-top: 3vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
@@ -392,7 +393,7 @@
 .navLinks a {
     text-decoration: none;
     color: white;
-    
+    font-size: larger;
 }
 
 .navLinks li {
@@ -405,11 +406,29 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: 0.6%;
+    margin-top: 0.8%;
+    padding-left: 10em;
 }
 
 .s2 {
     grid-area: s2;
+}
+
+#textruta {
+    margin-top: 6vh;
+    height: 20vh;
+    width: 40vw;
+}
+
+#kalender {
+    margin-top: 4vh;
+    width: 40vw;
+    
+}
+
+#kalender_top {
+   
+    width: 40vw;
 }
 
 .s3 {
@@ -419,7 +438,7 @@
 
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
     .navLinks {
         height: 50vh;
         width: 50vw;
