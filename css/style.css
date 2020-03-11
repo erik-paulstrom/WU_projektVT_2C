@@ -52,6 +52,15 @@
     align-items: center;
 }
 
+.na_2 {
+    grid-area: na;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .navLinks {
     display: flex;
     flex-direction: column;
@@ -106,6 +115,8 @@
     flex-direction: row;
     overflow-x: hidden;
 }
+
+
 
 .spel_2 {
     grid-area: spel_2;
@@ -227,15 +238,6 @@
     top: 10vh;
 }
 
-.kalender_top2 {
-    width: 100vw;
-    height: 7vh; 
-    background-color: #7472DB;
-    border: 1px solid #070db1;
-    display: flex;
-    align-items: center;
-}
-
 .kalender_top2 img {
     margin-left: 3vw;
 }
@@ -319,7 +321,7 @@
     "bakgrund1 bakgrund3 bakgrund4";
 }
 
-#kalender {
+.kalender {
     grid-area: kalender;
     border: 1px solid #bebebe;
     background-color: #e2e2e2;
@@ -329,7 +331,7 @@
     
 }
 
-#kalender_top {
+.kalender_top {
     border: 1px solid #070db1;
     margin-top: 0px;
     height: 50px;
@@ -337,17 +339,26 @@
     background-color: #7472db;
 }
 
-#kalender img {
+.kalender_top2 {
+    width: 100vw;
+    height: 7vh; 
+    background-color: #7472DB;
+    border: 1px solid #070db1;
+    display: flex;
+    align-items: center;
+}
+
+.kalender img {
     margin-top: 5px;
     margin-left: 5px;
 }
 
-#kalender th {
+.kalender th {
     font-size: 15px;
     border: 1px solid black;   
 }
 
-#kalender td {
+.kalender td {
     border: 1px solid black;
     border-bottom: none;
     border-left: none;
@@ -356,7 +367,7 @@
     align-items: center;
 }
 
-#kalender table {
+.kalender table {
     border-collapse: collapse; 
 }
 
@@ -367,7 +378,8 @@
 .maingrid {
     height: 100vh;
     width: 100vw;
-    grid-template-rows: 0.6fr 5fr 0.6fr 4fr;
+    overflow-y: hidden;
+    grid-template-rows: 7vh 5fr 0.6fr 4fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "he he"
@@ -376,19 +388,50 @@
     "s2 s3";
 }
 
+.grid_huvudruta_spel {
+    display: grid;
+    height: 85vh;
+    width: 100vw;
+    margin-top: 10vh;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "spel_1"
+    "spel_2"
+    "spel_3";
+}
+
 .he {
     grid-area: he;
     padding: 10px;
+    display: flex;
 }
 
+.titel_följdsida {
+    margin-left: 0vw;
+}
 .s1 {
     grid-area: s1;
+    height: 0.6fr;
 }
 
 .na {
     grid-area: na;
     background-color: #7472db;
     border: 1px solid #070db1;
+    height: 5vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.na_2 {
+    grid-area: na;
+    background-color: #7472db;
+    border: 1px solid #070db1;
+    height: 8vh;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -403,14 +446,21 @@
 .navLinks li {
     list-style-type: none;
     width: 100%;
-    
 }
 
 .navLinks {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: 0.8%;
+    margin-top: 0.1%;
+    padding-left: 10em;
+}
+
+.na_2 .navLinks {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1.3%;
     padding-left: 10em;
 }
 
@@ -425,15 +475,74 @@
     width: 40vw;
 }
 
-#kalender {
+.rad1 {
+    border-top: none;
+}
+
+.kalender {
     margin-top: 5vh;
     margin-right: 2vw;
     width: 40vw;
-    
 }
 
-#kalender_top {
+.kalender_top {
+    height: 5vh;
     width: 40vw;
+}
+
+.kalender2 {
+    width: 50vw;
+    margin-left: -50vw;
+}
+
+.kalender2 tr {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.kalender2 td {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kalender_top2 {
+    width: 100vw;
+    height: 7vh; 
+    margin-top: 7vh;
+    background-color: #7472DB;
+    border: 1px solid #070db1;
+    display: flex;
+    align-items: center;
+}
+
+.spel_1 {
+    overflow-y: hidden;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+}
+
+.spel_2 {
+    overflow-y: hidden;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+}
+
+.spel_3 {
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.grid_huvudruta_spel img {
+    width: 40vw;
+    height: 20vh;
 }
 
 .s3 {
