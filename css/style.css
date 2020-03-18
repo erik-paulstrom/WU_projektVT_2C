@@ -32,6 +32,10 @@
     justify-content: center;
 }
 
+.titel_startsida {
+    margin-left: 15vw;
+}
+
 .hemknapp {
     position: absolute;
     width: 40px;
@@ -40,7 +44,7 @@
 }
 
 .titel_följdsida {
-    margin-left: 30%;
+    margin-left: 27.5%;
 }
 
 .na {
@@ -385,6 +389,10 @@
     "bakgrund1 bakgrund3 bakgrund4";
 }
 
+#text_om_oss {
+    font-size: 0.96em;
+}
+
 .kalender {
     grid-area: kalender;
     border: 1px solid #bebebe;
@@ -494,6 +502,10 @@
     display: flex;
 }
 
+.titel_startsida {
+    margin-left: 0vw;
+}
+
 .titel_följdsida {
     margin-left: 0vw;
 }
@@ -553,6 +565,10 @@
 
 .s2 {
     grid-area: s2;
+}
+
+#text_om_oss {
+    font-size: 1.5em;
 }
 
 #textruta {
@@ -632,27 +648,35 @@
     border-top: none;
     border-bottom: none;
     display: flex;
-    justify-content: center;
 }
 
-#fifa {
-    height: 20vh;
+#fifa_titel {
+    margin-left: -22vw;
+}
+
+#smash_titel {
+    margin-left: -25vw;
+}
+
+#mario_titel {
+    margin-left: -23.5vw;
 }
 
 .spel_2 {
     border-bottom: none;
     display: flex;
-    justify-content: center;
+
 }
 
 .spel_3 {
     display: flex;
-    justify-content: center;
+
 }
 
 .grid_huvudruta_spel img {
     width: 40vw;
     height: 20vh;
+    margin-left: 27.5vw;
 }
 
 .s3 {
@@ -760,6 +784,7 @@
 
     .burger {
         position: relative;
+        margin-left: 10vw;
     }
     
     .burger div {
